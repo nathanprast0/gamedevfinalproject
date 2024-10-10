@@ -1,7 +1,9 @@
 import Phaser from "phaser"
-
+import GameOverScene from "./scenes/GameOverScene"
+import HowToPlayScene from "./scenes/HowToPlayScene"
 import PizzaRushScene from "./scenes/PizzaRushScene"
 import StartScene from "./scenes/StartScene"
+import WinScreen from "./scenes/WinScreen"
 
 const config = {
 	type: Phaser.AUTO,
@@ -14,7 +16,7 @@ const config = {
 			gravity: { y: 200 },
 		},
 	},
-	scene: [PizzaRushScene],
+	scene: [StartScene, HowToPlayScene, PizzaRushScene, GameOverScene, WinScreen],
 	scale: {
 		mode: Phaser.Scale.FIT,
 		autoCenter: Phaser.Scale.CENTER_BOTH,
